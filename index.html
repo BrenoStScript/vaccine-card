@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão de Vacinas Interativo</title>
+    <script src = "vacinas.js"></script>
+    <link rel="stylesheet" href="vacinas.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap');
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section class="description">
+            <h1>Carteira de vacinação infantil interativa</h1>
+            <div>
+                <h3>Insira a data de nascimento da criança.</h3>
+                <input type="date" oninput="calculateAge(born);" id="born"/>
+            </div>
+        </section>
+        <section>
+            <div class="card">
+                <div class="vaccine" name="atBirth" id="bcg">
+                    <h4>BCG</h4>
+                    <p id = "bcgText">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" name="atBirth" id="hepBD1">
+                    <h4>Hepatite B D1</h4>
+                    <p id = "hepBD1Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="pneumoD1" name='2M'>
+                    <h4>Pneumo D1</h4>
+                    <p name = "pneumoD1Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="vipD1" name="2M">
+                    <h4>VIP D1</h4>
+                    <p id = "vipD1Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="rotaD1" name="2M">
+                    <h4>Rotavírus D1</h4>
+                    <p id = "rotaD1Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="pentaD1" name="2M">
+                    <h4>Penta D1</h4>
+                    <p id="pentaD1Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="meningoCD1">
+                    <h4>Meningo C D1</h4>
+                    <p class="3M" id = "meningoCD1Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="pneumoD2">
+                    <h4>PNEUMO D2</h4>
+                    <p class="4M" id = "pneumoD2Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="vipD2">
+                    <h4>VIP D2</h4>
+                    <p id = "vipD2Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="pentaD2">
+                    <h4>Penta D2</h4>
+                    <p id = "pentaD2Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="rotaD2">
+                    <h4>Rotavírus D2</h4>
+                    <p id = "rotaD2Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="meningoCD2">
+                    <h4>Meningo C D2</h4>
+                    <p class="5M" id = "meningoCD2Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="vipD3">
+                    <h4>VIP D3</h4>
+                    <p id = "vipD3Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="pentaD3">
+                    <h4>Penta D3</h4>
+                    <p id = "pentaD3Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="febreAmarelaD1">
+                    <h4>Febre Amarela D1</h4>
+                    <p class="9M" >
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="meningoCD2">
+                    <h4>Meningo C R</h4>
+                    <p class="12M" id = "meningoCD2Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="pneumoD2">
+                    <h4>Pneumo R</h4>
+                    <p class="12M" id = "pneumoD2Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="triViralD1">
+                    <h4>Tríplice Viral D1</h4>
+                    <p class="12M" id = "triViralD1Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" id="triViralD2">
+                    <h4>Tríplice Viral D2</h4>
+                    <p class="15M" id = "triViralD2Text">
+                    
+                    </p>
+                </div>
+                <div class="vaccine" >
+                    <h4>VOP R1</h4>
+                    <p class="15M" >
+                    
+                    </p>
+                </div>
+                <div class="vaccine" >
+                    <h4>DTP R1</h4>
+                    <p class="15M" >
+                    
+                    </p>
+                </div>
+                <div class="vaccine" >
+                    <h4>Hepatite A DU</h4>
+                    <p class="15M" >
+                    
+                    </p>
+                </div>
+                <div class="vaccine" >
+                    <h4>Varicela D1</h4>
+                    <p class="15M" >
+                    
+                    </p>
+                </div>
+                <div class="vaccine" >
+                    <h4>VOP R2</h4>
+                    <p class="4Y" >
+                    
+                    </p>
+                </div>
+                <div class="vaccine" >
+                    <h4>DTP R2</h4>
+                    <p class="4Y" >
+                    
+                    </p>
+                </div>
+                <div class="vaccine" >
+                    <h4>Varicela D2</h4>
+                    <p class="4Y" >
+                    
+                    </p>
+                </div>
+                <div class="vaccine" >
+                    <h4>Febre Amarela D2</h4>
+                    <p class="4Y" >
+                    
+                    </p>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+</body>
+</html>

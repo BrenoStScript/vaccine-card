@@ -1,0 +1,91 @@
+body{
+    background-color: #f5f6f7;
+}
+
+
+.description{
+    margin:-20px 5px -10px 5px;
+    padding: 0 7vw;
+    color:#2b2b81;
+    font-family: 'Oswald', sans-serif;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+.description h1{
+    margin-bottom: -5px;
+    font-size: 2.5em;   
+}
+
+.description h3{
+    font-size: 1.3em;
+    margin-bottom: 2px;
+}
+
+input{
+    font-size: 1.3em;
+}
+
+
+.card {
+    margin: 10px;
+    box-sizing: border-box;
+    width: 85vw;
+    margin:20px auto;
+    height: 75vh;
+    border:2vw solid #2b2b81;
+    background-color: #2b2b81;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lora', sans-serif;
+    font-size: small;
+}
+
+.vaccine {
+    background-color: #f5f6f7;
+    padding: 0;
+    margin: .1%;
+    width: 10.9%;
+    height: 32.8%;
+}
+
+.vaccine h4{
+    text-align: center;
+    text-decoration: none;
+}
+
+.vaccine p{
+    margin: 0px;
+    font-size:1em;
+}
+
+
+@media (max-width: 1020px){
+
+    .card{
+        height:95vh;
+    }
+    .vaccine{
+        width:32.6%;
+        height: 10.9%;
+        margin: .33%;
+    }
+
+    h4{
+        font-size: 0.5em;
+    }
+
+    .description h1{
+        font-size: 1.7em;
+    }
+
+    .description h3, input{
+        font-size: 1em;
+    }
+
+}
+
+   
