@@ -13,6 +13,7 @@ body{
 }
 
 .description h1{
+    margin-top: 10px;
     margin-bottom: -5px;
     font-size: 2.5em;   
 }
@@ -53,6 +54,7 @@ input{
 }
 
 .vaccine h4{
+    margin:10px;
     text-align: center;
     text-decoration: none;
 }
@@ -60,7 +62,7 @@ input{
 .vaccine p{
     padding: 3px;
     text-align: center;
-    font-size:1.3em;
+    font-size:1.2em;
 }
 
 
