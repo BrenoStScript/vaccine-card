@@ -19,6 +19,7 @@ body{
 }
 
 .description h3{
+    margin-top: 15px;
     font-size: 1.3em;
     margin-bottom: 2px;
 }
