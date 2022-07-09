@@ -58,12 +58,13 @@ input{
 }
 
 .vaccine p{
-    margin: 0px;
-    font-size:1em;
+    padding: 3px;
+    text-align: center;
+    font-size:1.3em;
 }
 
 
-@media (max-width: 1020px){
+@media (max-width: 1025px){
 
     .card{
         height:95vh;
@@ -75,7 +76,7 @@ input{
     }
 
     h4{
-        font-size: 0.5em;
+        font-size: 0.7em;
     }
 
     .description h1{
@@ -86,6 +87,17 @@ input{
         font-size: 1em;
     }
 
+    .vaccine p{
+        margin-top: 0;
+        font-size: .9em;
+    }
+
+}
+
+@media(max-width:541px){
+    .vaccine p, h4{
+        font-size: 0.6em;
+    }
 }
 
    
