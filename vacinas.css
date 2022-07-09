@@ -61,6 +61,7 @@ input{
 }
 
 .vaccine p{
+    margin:3px;
     padding: 3px;
     text-align: center;
     font-size:1.2em;
