@@ -14,13 +14,12 @@ function calculateAge(){
     let nineMonths = document.getElementsByName('9M')
     let twelveMonths = document.getElementsByName('12M')
     let fifteenMonths = document.getElementsByName('15M')
-    let fourYears = document.getElementsByName('4Y')
+    let fourYears = document.getElementsByName('4Y')    
 
 
     function setDeadline(number,time,born){
         let deadline= new Date(born)
-
-        let go = "Aplicar ATÉ do dia: "
+        let go = "Aplicar ATÉ o dia: "
             
         deadline.setDate(deadline.getDate() + number)
 
@@ -29,7 +28,11 @@ function calculateAge(){
         let year= deadline.getFullYear()
 
         time.forEach(shot=>{
+            var img=document.createElement('img');
+            img.src='Green.png'
+
             shot.innerText = go + day + "/" + month + "/" + year
+            shot.appendChild(img)
         })
         
     }
@@ -47,10 +50,23 @@ function calculateAge(){
 
         time.forEach(shot=>{
             shot.innerText = wait + day + "/" + month + "/" + year
+            var img=document.createElement('img');
+            img.src='Yellow.png'
+            shot.appendChild(img)
         })
     }
 
-    let lost = "Dose lost!"
+    function setLost(time){
+        let lost = "Dose aplicada ou perdida!"
+        time.forEach(shot=>{
+            shot.innerText = lost
+            var img=document.createElement('img');
+            img.src='Red.png'
+            shot.appendChild(img)
+
+        })
+
+    }
     
     if(date>today){
         alert("Data muito avançada!")
@@ -62,9 +78,7 @@ function calculateAge(){
             setDeadline(30,atBirth,born)
              
         } else if(ageindays>30){
-            atBirth.forEach(shot=>{
-                shot.innerText= lost
-            })
+            setLost(atBirth)
         }
 
         /* twomonths */
@@ -75,9 +89,7 @@ function calculateAge(){
         }else if(ageindays>60 && ageindays<105){
             setDeadline(105,twoMonths,born)
         }else{
-            twoMonths.forEach(shot=>{
-                shot.innerText = lost;
-            })
+            setLost(twoMonths)
         }
 
         /* threeMonths */
@@ -88,9 +100,7 @@ function calculateAge(){
         }else if(ageindays>90 && ageindays<120){
             setDeadline(120,threeMonths,born)
         }else{
-            threeMonths.forEach(shot=>{
-                shot.innerText = lost;
-            })
+            setLost(threeMonths)
         }
 
         /*   fourMonths */
@@ -101,9 +111,7 @@ function calculateAge(){
         }else if(ageindays>120 && ageindays<240){
             setDeadline(240,fourMonths,born)
         }else{
-            fourMonths.forEach(shot=>{
-                shot.innerText = lost;
-            })
+            setLost(fourMonths)
         }
         
         /* fiveMonths */
@@ -114,9 +122,7 @@ function calculateAge(){
         }else if(ageindays>150 && ageindays<180){
             setDeadline(180,fiveMonths,born)
         }else{
-            fiveMonths.forEach(shot=>{
-                shot.innerText = lost;
-            })
+            setLost(fiveMonths)
         }
 
         /* sixMonths */
@@ -127,9 +133,7 @@ function calculateAge(){
         }else if(ageindays>180 && ageindays<210){
             setDeadline(210,sixMonths,born)
         }else{
-            sixMonths.forEach(shot=>{
-                shot.innerText = lost;
-            })
+            setLost(sixMonths)
         }
 
         /* nineMonths */
@@ -140,9 +144,7 @@ function calculateAge(){
         }else if(ageindays>270 && ageindays<365){
             setDeadline(365,nineMonths,born)
         }else{
-            nineMonths.forEach(shot=>{
-                shot.innerText = lost;
-            })
+            setLost(nineMonths)
         }
 
         /* twelveMonths */
@@ -153,9 +155,7 @@ function calculateAge(){
         }else if(ageindays>365 && ageindays<1461){
             setDeadline(1461,twelveMonths,born)
         }else{
-            twelveMonths.forEach(shot=>{
-                shot.innerText = lost;
-            })
+            setLost(twelveMonths)
         }
 
         /* fifteenMonths */
@@ -166,9 +166,7 @@ function calculateAge(){
         }else if(ageindays>515 && ageindays<1461){
             setDeadline(1461,fifteenMonths,born)
         }else{
-            fifteenMonths.forEach(shot=>{
-                shot.innerText = lost;
-            })
+            setLost(fifteenMonths)
         }
 
         /* fourYears */
@@ -179,10 +177,8 @@ function calculateAge(){
         }else if(ageindays>1461 && ageindays<2555){
             setDeadline(2555,fourYears,born)
         }else{
-            fourYears.forEach(shot=>{
-                shot.innerText = lost;
-            })
-            }
+            setLost(fourYears)
+        }
 
     }
 }

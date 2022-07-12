@@ -55,28 +55,35 @@ input{
 }
 
 .vaccine h4{
-    font-size: .9em;
+    font-size: .6rem;
     margin:8px;
     text-align: center;
     text-decoration: none;
 }
 
 .vaccine p{
+    display: flex;
+    flex-direction: column;
     margin:3px;
     padding: 3px;
     text-align: center;
-    font-size:1em;
+    font-size:0.6rem;
+}
+
+.vaccine img{
+    align-self: center;
+    height:7.5vh;
 }
 
 
 @media (max-width: 1025px){
 
     .card{
-        height:95vh;
+        height:1200px;
     }
     .vaccine{
         width:32.6%;
-        height: 10.9%;
+        height: 10.7%;
         margin: .33%;
     }
 
@@ -96,6 +103,10 @@ input{
         margin-top: 0;
         font-size: .9em;
     }
+
+   /*  .vaccine img{
+        width:50%;
+    } */
 
 }
 
